@@ -27,11 +27,11 @@ export default function App() {
       <br />
       <label> End Date </label>
       <input type="date" onChange={(e) => setEndDate(e.target.value)} />
-      <ul>
+      <div className="mission-list">
         {data.map((item, idx) => {
           return <MissionCard key={idx} mission={item} />;
         })}
-      </ul>
+      </div>
     </div>
   );
 }
