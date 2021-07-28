@@ -56,3 +56,30 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.date-input {
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+
+.date-input > label {
+  color: rgb(46, 45, 45);
+  margin-bottom: 1rem;
+}
+
+.date-input > input {
+  padding: 0.5rem 0.25rem;
+  border-radius: 3px;
+}
+
+.filters {
+  flex: 1;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.title {
+  text-align: center;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchHistory } from "./api";
+import DateInput from "./components/DateInput";
 import MissionCard from "./components/MissionCard";
 import "./styles.css";
 
@@ -22,11 +23,18 @@ export default function App() {
 
   return (
     <div>
-      <label> Start Date </label>
-      <input type="date" onChange={(e) => setStartDate(e.target.value)} />
-      <br />
-      <label> End Date </label>
-      <input type="date" onChange={(e) => setEndDate(e.target.value)} />
+      <h1 className="title"> História de SpaceX 🚀</h1>
+      <div className="filters">
+        <DateInput
+          label="Start Date"
+          onChange={(e) => setStartDate(e.target.value)}
+        />
+
+        <DateInput
+          label="End Date"
+          onChange={(e) => setEndDate(e.target.value)}
+        />
+      </div>
       <div className="mission-list">
         {data.map((item, idx) => {
           return <MissionCard key={idx} mission={item} />;
